@@ -11,14 +11,14 @@ export default function PersonalCard({
 
     // revisar dudo que este bien
     useEffect(() => {
-        document.addEventListener("mousemove", (e) => RotateElement(e, cardRef.current))
+        const eventListener = (e) => RotateElement(e, cardRef.current);
+
+        document.addEventListener("mousemove", eventListener)
         
         return () => {
-            document.removeEventListener("mousemove", (e) => {
-                RotateElement(e, cardRef.current);
-            });
+            document.removeEventListener("mousemove", eventListener);
         };
-    })
+    }, []);
 
     function ObtainCenter(element) {
         const rect = element.getBoundingClientRect();
