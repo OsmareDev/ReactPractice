@@ -1,0 +1,7 @@
+.personalCard {
+    transform-style: preserve-3d;
+    transform: 
+        perspective(8000px)
+        rotateX(var(--rotateX))
+        rotateY(var(--rotateY));
+}

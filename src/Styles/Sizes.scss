@@ -1,0 +1,97 @@
+@for $i from 0 through 20 {
+    .w#{$i*5}vw {
+        width: #{$i*5}#{'vw'}
+    };
+    .w#{$i*5}per {
+        width: #{$i*5}#{'%'}
+    };
+
+    .h#{$i*5}vh {
+        height: #{$i*5}#{'vh'}
+    };
+    .h#{$i*5}per {
+        height: #{$i*5}#{'%'}
+    };
+
+    .borderR#{$i*5}px {
+        border-radius: #{$i*5}#{'px'}
+    };
+    .borderR#{$i*5}per {
+        border-radius: #{$i*5}#{'%'}
+    };
+
+    .padding#{$i*5}px {
+        padding: #{$i*5}#{'px'}
+    };
+    .margin#{$i*5}px {
+        padding: #{$i*5}#{'px'}
+    };
+
+    .opacity#{$i*5} {
+        opacity: #{$i*5/100};
+    }
+}
+
+@for $i from 1 through 50 {
+    .borderR#{$i}px {
+        border-radius: #{$i}#{'px'}
+    };
+    .borderRBottom#{$i}px {
+        border-radius: #{'0px 0px'} #{$i}#{'px'} #{$i}#{'px'}
+    };
+
+    .w#{$i}px {
+        width: #{$i}#{'px'}
+    };
+    .h#{$i}px {
+        height: #{$i}#{'px'}
+    };
+
+    .fontSize#{$i}em {
+        font-size: #{$i/10}#{"em"};
+    }
+}
+
+@for $i from 0 to 160 {
+    .top#{$i*10}px {
+        top: #{$i*10}#{'px'};
+    }
+    .top-#{$i*10}px {
+        top: #{'-'}#{$i*10}#{'px'};
+    }
+    .bottom#{$i*10}px {
+        bottom: #{$i*10}#{'px'};
+    }
+    .bottom-#{$i*10}px {
+        bottom: #{'-'}#{$i*10}#{'px'};
+    }
+    .left#{$i*10}px {
+        left: #{$i*10}#{'px'};
+    }
+    .left-#{$i*10}px {
+        left: #{'-'}#{$i*10}#{'px'};
+    }
+    .right#{$i*10}px {
+        right: #{$i*10}#{'px'};
+    }
+    .right-#{$i*10}px {
+        right: #{'-'}#{$i*10}#{'px'};
+    }
+
+    .w#{$i*10}px {
+        width: #{$i*10}#{'px'}
+    };
+    .h#{$i*10}px {
+        height: #{$i*10}#{'px'}
+    };
+}
+
+@for $i from 0 through 10 {
+    .letterSpace#{$i}em{
+        letter-spacing: #{$i/10}#{"em"};
+    }
+
+    .borderR#{$i}per {
+        border-radius: #{$i*10}#{"%"};
+    }
+}

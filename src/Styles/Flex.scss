@@ -1,0 +1,21 @@
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+
+    .flex-item {
+        flex: 1;
+    }
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    @for $i from 1 through 20 {
+        .flex-item-#{$i*5} {
+            flex: #{($i*5)/100};
+        }
+    }
+}

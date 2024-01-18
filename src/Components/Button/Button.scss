@@ -1,0 +1,18 @@
+button {
+    transition: 0.2s ease;
+}
+
+button:active,
+button:hover {
+    background-color: darken($color: #005354, $amount: 5);
+}
+
+button:disabled {
+    transition: 0.5s ease;
+    pointer-events: none;
+    background-color: darken($color: #005354, $amount: 5);
+    height: 5px;
+    font-size: 0px;
+    padding: 0px;
+    width: 100%;
+}

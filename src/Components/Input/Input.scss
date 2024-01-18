@@ -1,0 +1,14 @@
+label {
+    transition: 0.5s ease;
+    pointer-events: none;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    bottom: 55px;
+    font-size: 0.8em;
+}
+
+input:focus {
+    outline: none;
+}

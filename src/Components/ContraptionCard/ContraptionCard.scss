@@ -1,0 +1,28 @@
+.cardHover {
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.cardHover:hover {
+    background: darken(darkCyan, $amount: 16);
+    height: 300px;
+    bottom: -150px;
+    // no me deja hacer el transform :/
+
+    div:nth-child(3) {
+        height: 190px;
+
+        p:nth-child(1) {
+            opacity: 0;
+            display: none;
+        }
+
+        p:nth-child(2) {
+            opacity: 1;
+        }
+    }
+}
+
+.cardHover div:nth-child(3) {
+    transition: 0.3s ease;
+}

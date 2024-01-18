@@ -1,0 +1,58 @@
+@import "./Fonts.scss";
+
+* {
+    margin: 0px;
+    font-family: "roboMedium";
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(138deg, rgba(2,0,36,1) 0%, rgba(38,5,73,1) 76%, rgba(88,0,135,1) 100%);
+    background: linear-gradient(138deg, rgba(2,0,36,1) 0%, rgba(55,14,144,1) 18%, rgba(88,0,135,1) 100%);
+    background: linear-gradient(138deg, rgba(0,113,47,1) 0%, rgba(55,14,144,1) 18%, rgba(88,0,135,1) 100%);
+    background: linear-gradient(138deg, rgba(0,73,72,1) 0%, rgba(55,14,144,1) 12%, rgba(88,0,135,1) 100%);
+}
+
+.centered {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.centerH {
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.centerV {
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.posAbsolute { position: absolute}
+.posRelative { position: relative}
+
+.disFlex { display: flex; }
+.disBlock { display: block; }
+.disNone { display: none; }
+.disInline { display: inline; }
+
+.borderNone { border: none; }
+.borderBottom { border-bottom: 3px solid white; }
+
+.textCenter { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+.centerTextH {
+    text-align: center;
+}
+.justifyText {
+    text-align: justify;
+}
+
+.bg-none {
+    background-color: rgba(0,0,0,0);
+    color: white;
+}
