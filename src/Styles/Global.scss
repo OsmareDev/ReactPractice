@@ -56,3 +56,16 @@ body {
     background-color: rgba(0,0,0,0);
     color: white;
 }
+
+.backfaceHidden {
+    backface-visibility: hidden;
+}
+
+.clickable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.initial {
+    all: initial;
+}

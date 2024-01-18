@@ -1,28 +1,34 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom';
 import './Login.scss'
-import Button from '../../Components/Button/Button.jsx'
-import Input from '../../Components/Input/Input.jsx'
+import TurningCard from '../../Components/TurningCard/TurningCard.jsx';
+import LogInForm from '../../Components/LoginForm/LoginForm.jsx';
+import SignInForm from '../../Components/SignInForm/SignInForm.jsx';
+
+import { useState } from 'react'
 
 export default function Login() {
 
-  const [loginForm, setLoginForm] = useState({ username: "", password: "" });
-  const isButtonDisabled = !loginForm.username || !loginForm.password;
+  const [turned, setTurned] = useState(false);
+  const onTurn = () => setTurned(!turned);
 
   return <>
-      <div className='w500px h450px centered posAbsolute borderR5px bg-midnight-60 shadow10HV-30B-burgundy flex-container-column'>
-        <h2 className='flex-item-50 w100per textCenter fontSize30em'>
-          Login
-        </h2>
-        <div className='flex-item-50 flex-container-column w100per'>
-          <Input labelText="Username" onChange={(e) => {setLoginForm({...loginForm, username: e.target.value})}}/>
-          <Input labelText='Password' onChange={(e) => {setLoginForm({...loginForm, password: e.target.value})}}/>
-        </div>
-        <div className='flex-item-50 w100per'>
-          <Link to="/home">
-            <Button displayName='Iniciar Sesion' className='posRelative centered textCenter' disabled={isButtonDisabled}/>
-          </Link>
-        </div>
-      </div>
+      <TurningCard
+        turned={turned}
+        classNameFront='flex-container-column'
+        classNameBack='flex-container-column'
+        insideElementsFrontFace={[
+          <h2 key='titleL' className='posRelative flex-item-40 w100per textCenter fontSize30em'>
+            LogIn
+            <button onClick={onTurn} className='posAbsolute centerV right20px w100px h25px borderNone borderR5px bg-none clickable border-white-2px'> Sign In </button>
+          </h2>,
+          <LogInForm key='formL' className='flex-item-70'/>
+        ]}
+        insideElementsBackFace={[
+          <h2 key='titleL' className='posRelative flex-item-40 w100per textCenter fontSize30em'>
+            SignIn
+            <button onClick={onTurn} className='posAbsolute centerV left20px w100px h25px borderNone borderR5px bg-none clickable border-white-2px'> Log In </button>
+          </h2>,
+          <SignInForm key={'formS'} className='flex-item-70'/>
+        ]}
+      />
     </>
 }

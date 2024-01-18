@@ -26,6 +26,9 @@ $colors: (
             background-color: rgba($value, calc($i*5/100));
             color: #fff;
         };
+        .border-#{"" + $color}-#{$i}px {
+            border: #{$i}#{"px"} solid #{$value};
+        }
 
         @for $j from 0 through 20 {
             .shadow#{$i*5}H-#{$j*5}B-#{"" + $color} {
