@@ -8,34 +8,34 @@ $colors: (
     darkSlateBlue: #2f2a44,
     darkSlateGray: #1c2b2b,
     white: #fff,
-    grey: #777
+    gray: #777
 );
 
 @each $color, $value in $colors {
-    .bg-#{$color} {
+    .bg-#{"" + $color} {
         background-color: $value;
         color: #fff;
     };
 
-    .color-#{$color} {
+    .color-#{"" + $color} {
         color: $value;
     };
 
     @for $i from 0 through 20 {
-        .bg-#{$color}-#{$i*5} {
-            background-color: rgba($value, $i*5/100);
+        .bg-#{"" + $color}-#{$i*5} {
+            background-color: rgba($value, calc($i*5/100));
             color: #fff;
         };
 
         @for $j from 0 through 20 {
-            .shadow#{$i*5}H-#{$j*5}B-#{$color} {
-                box-shadow: #{$i*5}#{"px 0 px"} #{$j*5}#{"px"} #{$value};
+            .shadow#{$i*5}H-#{$j*5}B-#{"" + $color} {
+                box-shadow: #{calc($i*5)}#{"px 0 px"} #{calc($j*5)}#{"px"} #{$value};
             };
-            .shadow#{$i*5}V-#{$j*5}B-#{$color} {
-                box-shadow: #{"0 px"} #{$i*5}#{"px"} #{$j*5}#{"px"} #{$value};
+            .shadow#{$i*5}V-#{$j*5}B-#{"" + $color} {
+                box-shadow: #{"0 px"} #{calc($i*5)}#{"px"} #{calc($j*5)}#{"px"} #{$value};
             };
-            .shadow#{$i*5}HV-#{$j*5}B-#{$color} {
-                box-shadow: #{$i*5}#{"px"} #{$i*5}#{"px"} #{$j*5}#{"px"} #{$value};
+            .shadow#{$i*5}HV-#{$j*5}B-#{"" + $color} {
+                box-shadow: #{calc($i*5)}#{"px"} #{calc($i*5)}#{"px"} #{calc($j*5)}#{"px"} #{$value};
             };
         }
     }

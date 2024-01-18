@@ -14,8 +14,8 @@
     align-items: center;
 
     @for $i from 1 through 20 {
-        .flex-item-#{$i*5} {
-            flex: #{($i*5)/100};
+        .flex-item-#{calc($i*5)} {
+            flex: #{calc(($i*5)/100)};
         }
     }
 }
