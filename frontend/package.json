@@ -27,5 +27,6 @@
     "json-server": "^1.0.0-alpha.21",
     "sass": "^1.69.7",
     "vite": "^5.0.8"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }

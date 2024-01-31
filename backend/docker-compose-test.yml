@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  backend-test:
+    build:
+      context: .
+      dockerfile: Dockerfile.testapi
+    ports:
+      - "3000:3000"
+    links:
+      - mongoDB
+    volumes:
+      - .:/home/app
+  mongoDB:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=test
+      - MONGO_INITDB_ROOT_PASSWORD=test

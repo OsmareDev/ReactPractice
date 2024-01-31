@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "oscar",
+      "password": "marin",
+      "active": true
+    },
+    {
+      "id": "de24",
+      "username": "prueba",
+      "password": "123",
+      "active": true
+    },
+    {
+      "id": "34b3",
+      "username": "eevee",
+      "password": "eevee",
+      "active": true
+    }
+  ]
+}
