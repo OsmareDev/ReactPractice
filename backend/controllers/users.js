@@ -1,5 +1,6 @@
 const usersRouter = require('express').Router()
 const User = require('../models/user')
+const userExtractor = require('../middleware/userExtractor')
 
 usersRouter.get('/', (request, response) => {
   User.find({}).then(users => {
@@ -17,8 +18,8 @@ usersRouter.get('/:id', (request, response, next) => {
     .catch(error => next(error))
 })
 
-usersRouter.delete('/:id', (request, response, next) => {
-  User.findByIdAndDelete(request.params.id)
+usersRouter.delete('/:id', userExtractor, (request, response, next) => {
+  User.findByIdAndDelete(request.userId)
     .then(result => {
       response.status(204).end()
     })
